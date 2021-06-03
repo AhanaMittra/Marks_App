@@ -1,0 +1,10 @@
+h1{
+    color: darkcyan;
+}
+h2{
+    color: cyan;
+}
+
+table, th, td{
+    border: 1px black solid;
+}

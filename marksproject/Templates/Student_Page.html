@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX PAGE</title>
+    <link rel="stylesheet" href="{% static 'Style.css' %}" />
+</head>
+<body>
+    <h1>Welcome To Index Page</h1>
+    <h2>Marks Table: </h2>
+
+    {% if marks_info %}
+        
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Section</th>
+                <th>Marks</th>
+            </thead>
+
+            {% for st in marks_info %}
+                <tr>
+                    <td>{{ st.Name }}</td>
+                    <td>{{ st.Email }}</td>
+                    <td>{{ st.Section }}</td>
+                    <td>{{ st.Marks_obtained }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    {% else %}
+        <p>Table couldn't be accessed </p>
+    {% endif %}
+</body>
+</html>
