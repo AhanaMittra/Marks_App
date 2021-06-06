@@ -18,6 +18,7 @@ from django.urls import path
 from marksapp import views
 
 urlpatterns = [
+    path('', views.index,name='index'),
     path('Student_Page/', views.user, name='user'),
     path('admin/', admin.site.urls),
 ]

@@ -5,16 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INDEX PAGE</title>
+    <title>Student Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'Style.css' %}" />
 </head>
 <body>
-    <h1>Welcome To Index Page</h1>
-    <h2>Marks Table: </h2>
+    <div class='container'>
+        <div class='jumbotron'>
+            <h1>Welcome To Index Page</h1>
+        </div>
 
-    {% if marks_info %}
+        <h2>Marks Table: </h2>
+        {% if marks_info %}
         
-        <table>
+        <table class="center">
             <thead>
                 <th>Name</th>
                 <th>Email</th>
@@ -32,8 +36,10 @@
             {% endfor %}
         </table>
 
-    {% else %}
-        <p>Table couldn't be accessed </p>
-    {% endif %}
+        {% else %}
+            <p>Table couldn't be accessed </p>
+        {% endif %}
+    </div>
+    
 </body>
 </html>

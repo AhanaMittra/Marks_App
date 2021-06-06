@@ -8,3 +8,12 @@ h2{
 table, th, td{
     border: 1px black solid;
 }
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container{
+    align-content: center;
+}

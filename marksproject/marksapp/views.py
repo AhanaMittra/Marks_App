@@ -1,11 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import Student
 
 # Create your views here.
 
-# def index(request):
-#     return HttpResponse("Marks Distribution Application!!!!")
+def index(request):
+    return render(request, 'Home.html')
 
 def user(request):
     marks_list = Student.objects.order_by('Marks_obtained') 
